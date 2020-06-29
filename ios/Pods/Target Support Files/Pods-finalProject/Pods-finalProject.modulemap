@@ -1,0 +1,6 @@
+module Pods_finalProject {
+  umbrella header "Pods-finalProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
