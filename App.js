@@ -7,6 +7,6 @@ export default class App extends React.Component {
   render() {
     return (
       <SafeAreaView>
-          <Text>hello bassam</Text>
+          <Text>hello world</Text>
       </SafeAreaView>
     )}};
