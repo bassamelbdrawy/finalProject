@@ -4,5 +4,7 @@ export default {
     electroics:'الالكترونيات',
     beauty:'التجميل',
     furniture:'المطبخ والمنزل',
-    shoes:'الازياء'
+    shoes:'الازياء',
+    newArrivel:'وصل حديثا',
+    more:'المزيد'
 }

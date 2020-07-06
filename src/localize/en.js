@@ -4,5 +4,7 @@ export default {
     electroics:'electronics',
     beauty:'beauty',
     furniture:'furniture',
-    shoes:'shoes'
+    shoes:'shoes',
+    newArrivel:'new arrivel',
+    more:'more',
 }

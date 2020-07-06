@@ -62,6 +62,19 @@ const styles = StyleSheet.create({
         marginRight:scale(20),
         marginLeft:scale(20),
         
+    },
+    itemsContainer:{
+        backgroundColor:'#F5F6F8',
+        width:scale(373),
+        height:verticalScale(565)
+    },
+    itemsTitle:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        marginRight:scale(20),
+        marginLeft:scale(20),
+        marginTop:verticalScale(16)
     }
   
   });
