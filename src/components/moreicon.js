@@ -3,18 +3,18 @@ import {Text,View,SafeAreaView, TouchableOpacity, I18nManager,Image,StyleSheet} 
 import {scale,verticalScale,moderateScale} from '../helper/scaling';
 
 
-function MoreIcon({text}){
+function MoreIcon({text, outerContainerStyle, innerContainerStyle}){
     return(
-        <View style={styles.container}>
+        <View style={[styles.container, outerContainerStyle]}>
             <Text style={styles.moreName}> {text} </Text>
-            <View style={styles.moreImage}>
-                <Image style={ I18nManager.isRTL? styles.leftArrow : styles.rightArrow} source={require('../assets/photos/Path11.png')} />
+            <View style={[styles.moreImage, innerContainerStyle]}>
+                <Image style={styles.arrowStyle} source={require('../assets/photos/Path11.png')} />
             </View>
         </View>
     )
 
 }
-
+const direction = I18nManager.isRTL ? [] : [{rotateY: '180deg'}];
 const styles = StyleSheet.create({
     container: {
       width:scale(77.98),
@@ -33,17 +33,10 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center'
     },
-    rightArrow:{
+    arrowStyle:{
         width:scale(5.17),
         height:verticalScale(9.04),
-        transform: [
-            { rotateY: '180deg'},
-          ], 
-    },
-    leftArrow:{
-        width:scale(5.17),
-        height:verticalScale(9.04),
+        transform: direction, 
     }
-  
   });
   export default MoreIcon;

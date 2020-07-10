@@ -6,5 +6,15 @@ export default {
     furniture:'المطبخ والمنزل',
     shoes:'الازياء',
     newArrivel:'وصل حديثا',
-    more:'المزيد'
-}
+    more:'المزيد',
+    product:'اسم المنتج',
+    category:'كاتيجوري',
+    sr100:'١٠٠ رس',
+   sectionName:'اسم السكشن',
+   mostImportantStore:'اهم المتاجر المميزه',
+   storeName:'اسم المتجر',
+   rate:'التصنيف',
+   adArea:'مساحه اعلانيه',
+    news:'كل جديد',
+    here:'هنا',
+} 

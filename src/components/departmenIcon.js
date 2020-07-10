@@ -30,9 +30,9 @@ const styles = StyleSheet.create({
     departmentName:{
       width:scale(45),
       height:verticalScale(12),
-      
-     
-      
+      maxWidth:scale(55)
+
+        
     }
   
   });

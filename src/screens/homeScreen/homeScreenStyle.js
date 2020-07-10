@@ -50,6 +50,15 @@ const styles = StyleSheet.create({
         
 
     },
+    adPhoto:{
+        width:scale(330),
+        height:verticalScale(192),
+        borderRadius:15,
+        resizeMode:'cover',
+        position:'absolute',
+        opacity:0.18
+    }
+    ,
     departments:{
         height:verticalScale(158),
         width:scale(410),
@@ -66,7 +75,7 @@ const styles = StyleSheet.create({
     itemsContainer:{
         backgroundColor:'#F5F6F8',
         width:scale(373),
-        height:verticalScale(565)
+        height:verticalScale(330)
     },
     itemsTitle:{
         flexDirection:'row',
@@ -75,6 +84,38 @@ const styles = StyleSheet.create({
         marginRight:scale(20),
         marginLeft:scale(20),
         marginTop:verticalScale(16)
+    },
+    itemsList:{
+        width:scale(360),
+        height:verticalScale(162),
+        flexDirection:'row',
+        justifyContent:'space-between',
+        marginTop:verticalScale(10)
+
+    },
+    adImageView:{
+        height:verticalScale(145),
+        width:scale(360),
+       
+        alignItems:'center'
+    },
+    adImage:{
+        width:scale(320),
+        height:verticalScale(100),
+        resizeMode:'contain'
+    },
+    storeView:{
+        width:scale(360),
+        height:verticalScale(132)
+    },
+    storeText:{
+        textAlign:'left',
+        marginTop:verticalScale(10),
+        marginLeft:scale(10)
+    },
+    storeList:{
+        flexDirection:'row',
+        justifyContent:'space-between',
     }
   
   });
