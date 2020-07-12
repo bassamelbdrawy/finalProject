@@ -1,6 +1,6 @@
 
 import React from 'react';
-import AppNav from './src/navigation/introStack';
+import AppNav from './src/navigation/introstack/introStack';
 
 export default class App extends React.Component {
 
