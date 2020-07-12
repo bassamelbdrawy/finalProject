@@ -9,7 +9,7 @@ export default class introScreen extends React.Component {
 
   componentDidMount=()=>{
     setTimeout(() => {
-      this.props.navigation.navigate('homeScreen')
+      this.props.navigation.navigate('appDrawer')
       }, 5000);
   }
 

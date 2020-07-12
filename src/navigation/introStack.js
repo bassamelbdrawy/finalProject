@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import introScreen from '../screens/introScreen/introScreen';
-import homeScreen from '../screens/homeScreen/homeScreen';
+import AppDrawer from './drawer';
 
 const Stack = createStackNavigator();
 
@@ -11,7 +11,7 @@ function AppNav() {
         <NavigationContainer>
         <Stack.Navigator headerMode='none' >
           <Stack.Screen name="introScreen" component={introScreen} />
-          <Stack.Screen name="homeScreen" component={homeScreen} />
+          <Stack.Screen name="appDrawer" component={AppDrawer} />
         </Stack.Navigator>
         </NavigationContainer>
     );

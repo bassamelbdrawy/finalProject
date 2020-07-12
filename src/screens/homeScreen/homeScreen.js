@@ -25,7 +25,9 @@ export default class homeScreen extends React.Component {
         <ScrollView style={styles.container} >
         <View style= {styles.nav}>
           <View style={styles.navIcons}>
-            <Image style={styles.menuBottom}  source={require('../../assets/photos/More.png')}/>
+            <TouchableOpacity onPress={()=>{this.props.navigation.openDrawer()}}>
+                <Image style={styles.menuBottom}  source={require('../../assets/photos/More.png')}/>
+            </TouchableOpacity>
             <Image style={styles.logo}  source={require('../../assets/photos/Group161.png')}/>
             <Image style={styles.cartBottom}  source={require('../../assets/photos/Cart.png')}/>
           </View>
