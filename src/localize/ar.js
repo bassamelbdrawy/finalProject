@@ -17,4 +17,12 @@ export default {
    adArea:'مساحه اعلانيه',
     news:'كل جديد',
     here:'هنا',
+    homepage:'تصفح',
+    sections:'الاقسام',
+    favourite:'المفضله',
+    busket:'سله المشتريات',
+    search:'بحث',
+    whoarewe:'من نحن',
+    contactus:'تواصل معنا',
+    logout:'تسجيل الخروج'
 } 

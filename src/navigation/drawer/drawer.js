@@ -16,7 +16,7 @@ const Drawer = createDrawerNavigator();
 
 function AppDrawer() {
     return (
-    <Drawer.Navigator drawerStyle={{ width : width*0.9 }} drawerContent={props=> <DrawerContent {...props}/>} >
+    <Drawer.Navigator drawerStyle={{ width }} drawerContent={props=> <DrawerContent {...props}/>} >
         <Drawer.Screen name="homeStack" component={homeStack}  />
         <Drawer.Screen name="sectionStack" component={sectionStack}  />
         <Drawer.Screen name="favoriteStack" component={favoriteStack}  />

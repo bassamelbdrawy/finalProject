@@ -17,4 +17,12 @@ export default {
     adArea:'Ad area',
     news:'news',
     here:'here',
+    homepage:'home page',
+    sections:'sections',
+    favourite:'favourite',
+    busket:'busket',
+    search:'search',
+    whoarewe:'who are we',
+    contactus:'contact us',
+    logout:'Log Out'
 }
