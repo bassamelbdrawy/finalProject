@@ -24,5 +24,10 @@ export default {
     search:'search',
     whoarewe:'who are we',
     contactus:'contact us',
-    logout:'Log Out'
+    logout:'Log Out',
+    electronicsection:'electronic section',
+    phones:'phones',
+    laptop:'laptop',
+    desktop:'desktop',
+    tv:'televsion'
 }

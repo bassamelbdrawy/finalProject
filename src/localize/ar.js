@@ -24,5 +24,10 @@ export default {
     search:'بحث',
     whoarewe:'من نحن',
     contactus:'تواصل معنا',
-    logout:'تسجيل الخروج'
+    logout:'تسجيل الخروج',
+    electronicsection:'قسم الاكترونيات',
+    phones:'هواتف',
+    laptop:'لابتوب',
+    desktop:'ديسكتوب',
+    tv:'تلفيزيون'
 } 

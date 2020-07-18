@@ -4,10 +4,10 @@ import {styles} from './departmentIconStyle';
 
 
 
-function DepartmentIcon({name,image}){
+function DepartmentIcon({name,image,edit,editImage}){
     return(
-        <View style={styles.container}>
-            <Image style={styles.departmentImage} source={image}/>
+        <View style={[styles.container ,edit]}>
+            <Image style={[styles.departmentImage, editImage]} source={image}/>
             <Text style={styles.departmentName}> {name} </Text>
         </View>
     )
