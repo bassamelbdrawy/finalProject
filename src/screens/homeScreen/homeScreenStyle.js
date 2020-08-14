@@ -66,8 +66,6 @@ const styles = StyleSheet.create({
 
     },
     departmentList:{
-        flexDirection:'row',
-        justifyContent:'space-between',
         marginRight:scale(20),
         marginLeft:scale(20),
         

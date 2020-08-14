@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {Text,View,SafeAreaView, TouchableOpacity, I18nManager,Image, ScrollView} from 'react-native';
+import {Text,View,SafeAreaView, TouchableOpacity, I18nManager,Image, ScrollView,FlatList} from 'react-native';
 import styles from './homeScreenStyle';
 import DepartmentIcon from '../../components/departmenticon/departmenIcon';
 import MoreIcon from '../../components/moreicon/moreIcon';
@@ -17,7 +17,21 @@ if (I18nManager.isRTL) {
   strings.setLanguage('en')
 }
 
+const departmentData =  [
+  {"sectionName": "electronics", "sectionIcon": require("../../assets/photos/Electronics.png"), "sectionItems":[{"itemName":"phones"},{"itemName":"laptop"}]},
+  {"sectionName": "beauty", "sectionIcon": require("../../assets/photos/Beauty.png"), "sectionItems":[{"itemName":"clothes"},{"itemName":"shoes"}]},
+  {"sectionName": "sounds", "sectionIcon": require("../../assets/photos/Furniture.png"), "sectionItems":[{"itemName":"headphones"},{"itemName":"speakers"}]},
+  {"sectionName": "sounds", "sectionIcon": require("../../assets/photos/Furniture.png"), "sectionItems":[{"itemName":"headphones"},{"itemName":"speakers"}]},
+]
+
 export default class homeScreen extends React.Component {
+
+renderDepartmentsItems=({item}) =>{
+  return(
+    <DepartmentIcon name = {item.sectionName} image = {item.sectionIcon} />
+  )
+}
+
 
   render() {
     return (
@@ -42,12 +56,15 @@ export default class homeScreen extends React.Component {
                 <MoreIcon text={strings.more}/>
               </View>  
           </View>
-          <View style={styles.departmentList}>
-            <DepartmentIcon name = {strings.electroics} image = {require('../../assets/photos/Electronics.png')} />
-            <DepartmentIcon name = {strings.beauty} image = {require('../../assets/photos/Beauty.png')} />
-            <DepartmentIcon name = {strings.furniture} image = {require('../../assets/photos/Furniture.png')} />
-            <DepartmentIcon name = {strings.shoes} image = {require('../../assets/photos/Shoes.png')} />
-          </View>
+          <FlatList
+                    style={{marginTop:verticalScale(25)}}
+                    contentContainerStyle={styles.departmentList}
+                    numColumns={1}
+                    horizontal={true}
+                    ItemSeparatorComponent={() => <View style={{width: scale(20)}}/>}
+                    data={departmentData}
+                    renderItem={this.renderDepartmentsItems}
+                    />
         </View>
         <View style={styles.itemsContainer}>
            <View style={styles.itemsTitle}>

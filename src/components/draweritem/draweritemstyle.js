@@ -5,8 +5,7 @@ import {scale,verticalScale,moderateScale} from '../../helper/scaling';
 const direction = I18nManager.isRTL ? [] : [{rotateY: '180deg'}];
 export const styles = StyleSheet.create({
     container: {
-      width:scale(335),
-      height:verticalScale(48),
+      //height:verticalScale(48),
       backgroundColor:'white',
       flexDirection:'row',
       alignItems:'center',
@@ -17,10 +16,11 @@ export const styles = StyleSheet.create({
         marginLeft:scale(20),
         width:scale(18),
         height:verticalScale(18),
-        resizeMode:'contain'
+        resizeMode:'contain',
+        marginRight: scale(7)
     },
     moreName:{
-        marginRight:scale(180),
+        textAlign: 'left',
         maxWidth:scale(94)
     },
     moreImage:{
@@ -37,6 +37,9 @@ export const styles = StyleSheet.create({
         width:scale(6),
         height:verticalScale(6),
         transform: direction,
-         
+    },
+    imageAndTextContainer: {
+        flexDirection: 'row',
+        alignItems: 'center'
     }
   });

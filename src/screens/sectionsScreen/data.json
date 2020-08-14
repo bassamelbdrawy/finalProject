@@ -1,0 +1,8 @@
+{
+    "data": [
+        {"sectionName": "electronics", "sectionIcon": "../../assets/photos/11.png", "sectionItems":[{"itemName":"phones"},{"itemName":"laptop"}]},
+        {"sectionName": "beauty", "sectionIcon": "../../assets/photos/11.png", "sectionItems":[{"itemName":"clothes"},{"itemName":"shoes"}]},
+        {"sectionName": "sounds", "sectionIcon": "../../assets/photos/11.png", "sectionItems":[{"itemName":"headphones"},{"itemName":"speakers"}]}
+
+    ]
+}

@@ -32,34 +32,35 @@ const styles = StyleSheet.create({
         fontSize:18,
     },
     sectionTitleView:{
-        height:verticalScale(50),
-        backgroundColor:'#F5F6F8',
-        justifyContent:'center',
-        alignItems:'center'
+        //justifyContent:'center',
+        //alignItems:'center'
     },
     sectionTitle:{
-        marginLeft:scale(-88),
         fontSize:14,
+        marginBottom: verticalScale(15),
+        textAlign:'left'
     },
     sectionContainer:{
-        width:scale(360),
-        height:verticalScale(590),
+        flex: 1,
         backgroundColor:'#F5F6F8',
-        flexDirection:'row'
+        flexDirection:'row',
+        paddingVertical: verticalScale(20),
+        paddingHorizontal: scale(10)
     },
     section:{
-        height:verticalScale(517),
-        width:scale(85),
-        alignItems:'center',
-        justifyContent:'flex-start'
-        
+        marginRight: scale(15),
+        marginTop: verticalScale(22)
     },
     insection:{
         width:scale(265),
-        height:verticalScale(530),
+        height:verticalScale(500),
         borderRadius:15,
         backgroundColor:'white',
-        alignItems:'center',
+    },
+    subSectionContainerStyle: {
+        flex: 1,
+        paddingHorizontal: scale(10),
+        paddingVertical: verticalScale(10)
     }
   });
 

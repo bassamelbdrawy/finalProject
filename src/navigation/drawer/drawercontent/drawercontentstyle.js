@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
         borderRadius:15,
         marginLeft:scale(12),
-        marginTop:verticalScale(10)
+        marginTop:verticalScale(10),
+        justifyContent:'space-around'
     },
     terms:{
         width:scale(335),
@@ -53,7 +54,8 @@ const styles = StyleSheet.create({
         borderRadius:15,
         marginTop:verticalScale(15),
         backgroundColor:'white',
-        marginLeft:scale(12)
+        marginLeft:scale(12),
+        justifyContent:'space-around'
     }
   
   });
