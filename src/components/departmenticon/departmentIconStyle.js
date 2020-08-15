@@ -19,8 +19,6 @@ export const styles = StyleSheet.create({
       marginBottom: verticalScale(5)
     },
     departmentImage:{
-      width: scale(17),
-      height: verticalScale(24),
       resizeMode: 'contain',
       tintColor: '#fff'
     },

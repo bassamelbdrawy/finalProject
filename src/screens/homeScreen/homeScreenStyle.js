@@ -72,8 +72,6 @@ const styles = StyleSheet.create({
     },
     itemsContainer:{
         backgroundColor:'#F5F6F8',
-        width:scale(373),
-        height:verticalScale(330)
     },
     itemsTitle:{
         flexDirection:'row',
@@ -84,17 +82,12 @@ const styles = StyleSheet.create({
         marginTop:verticalScale(16)
     },
     itemsList:{
-        width:scale(360),
-        height:verticalScale(162),
-        flexDirection:'row',
-        justifyContent:'space-between',
-        marginTop:verticalScale(10)
-
+        marginTop:verticalScale(10),
+        marginBottom:verticalScale(10)
     },
     adImageView:{
         height:verticalScale(145),
         width:scale(360),
-       
         alignItems:'center'
     },
     adImage:{

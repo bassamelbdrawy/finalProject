@@ -5,8 +5,8 @@ import { scale } from '../../helper/scaling';
 
 function DepartmentIcon({name,image,edit,editImage, key, onClick=() => {}, pressed = false}){
     return(
-        <TouchableOpacity key={key} style={[styles.container ,edit]} onPress={() => onClick()}>
-            <View style={[styles.departmentView, pressed && styles.pressedView]}>
+        <TouchableOpacity key={key} style={[styles.container]} onPress={() => onClick()}>
+            <View style={[styles.departmentView,edit, pressed && styles.pressedView]}>
                 <Image style={[styles.departmentImage, editImage, pressed && styles.pressedImage]} source={image}/>
             </View>
             <Text style={styles.departmentName} numberOfLines={1}> {name} </Text>

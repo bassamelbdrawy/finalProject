@@ -21,14 +21,30 @@ const departmentData =  [
   {"sectionName": "electronics", "sectionIcon": require("../../assets/photos/Electronics.png"), "sectionItems":[{"itemName":"phones"},{"itemName":"laptop"}]},
   {"sectionName": "beauty", "sectionIcon": require("../../assets/photos/Beauty.png"), "sectionItems":[{"itemName":"clothes"},{"itemName":"shoes"}]},
   {"sectionName": "sounds", "sectionIcon": require("../../assets/photos/Furniture.png"), "sectionItems":[{"itemName":"headphones"},{"itemName":"speakers"}]},
+  {"sectionName": "beauty", "sectionIcon": require("../../assets/photos/Beauty.png"), "sectionItems":[{"itemName":"clothes"},{"itemName":"shoes"}]},
   {"sectionName": "sounds", "sectionIcon": require("../../assets/photos/Furniture.png"), "sectionItems":[{"itemName":"headphones"},{"itemName":"speakers"}]},
+  {"sectionName": "beauty", "sectionIcon": require("../../assets/photos/Beauty.png"), "sectionItems":[{"itemName":"clothes"},{"itemName":"shoes"}]},
+  
+]
+
+const itemData =[
+  {"productName":"product","categoryName":"category","itemIcon":require("../../assets/photos/Image13.png"),"price":"100 sr"},
+  {"productName":"product","categoryName":"category","itemIcon":require("../../assets/photos/Image14.png"),"price":"100 sr"},
+  {"productName":"product","categoryName":"category","itemIcon":require("../../assets/photos/Image15.png"),"price":"100 sr"},
+  {"productName":"product","categoryName":"category","itemIcon":require("../../assets/photos/Image13.png"),"price":"100 sr"}
 ]
 
 export default class homeScreen extends React.Component {
 
 renderDepartmentsItems=({item}) =>{
   return(
-    <DepartmentIcon name = {item.sectionName} image = {item.sectionIcon} />
+    <DepartmentIcon name = {item.sectionName} image = {item.sectionIcon} edit={{backgroundColor:'none'}} editImage={{tintColor:'none'}}/>
+  )
+}
+
+renderItemItems=({item})=>{
+  return(
+    <ItemIcon product={item.productName} category={item.categoryName} price={item.price} image={item.itemIcon} />
   )
 }
 
@@ -71,11 +87,14 @@ renderDepartmentsItems=({item}) =>{
              <Text>{strings.newArrivel}</Text>
              <MoreIcon text = {strings.more} />
            </View>
-           <View style={styles.itemsList}>
-             <ItemIcon product ={strings.product}  category= {strings.category} price={strings.sr100} image={require('../../assets/photos/Image13.png')}/>
-             <ItemIcon product ={strings.product}  category= {strings.category} price={strings.sr100} image={require('../../assets/photos/Image14.png')}/>
-             <ItemIcon product ={strings.product}  category= {strings.category} price={strings.sr100} image={require('../../assets/photos/Image15.png')}/>
-            </View>
+           <FlatList
+                    style={styles.itemsList}
+                    numColumns={1}
+                    horizontal={true}
+                    ItemSeparatorComponent={() => <View style={{width: scale(5)}}/>}
+                    data={itemData}
+                    renderItem={this.renderItemItems}
+                    />
            <View style={styles.adImageView}>
              <Image style={styles.adImage} source={require('../../assets/photos/MaskGroup1.png')}/>
            </View>
