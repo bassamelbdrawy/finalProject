@@ -5,7 +5,7 @@ import DepartmentIcon from '../../components/departmenticon/departmenIcon';
 import styles from './sectionScreenStyle';
 import strings from '../../localize/index';
 import DrawerItem from '../../components/draweritem/draweritem';
-import { verticalScale, scale } from '../../helper/scaling';
+import { verticalScale, scale, moderateScale } from '../../helper/scaling';
 
 const data =  [
     {"sectionName": "electronics", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"phones"},{"itemName":"laptop"}]},
@@ -36,6 +36,7 @@ export default class sectionScreen extends React.Component {
         return(
             <DrawerItem
                 text={item.itemName} 
+                textStyle={{fontSiza:moderateScale(14),color:'#4B6584'}}
             />
         )
     }
@@ -46,7 +47,7 @@ export default class sectionScreen extends React.Component {
                 <TouchableOpacity onPress={()=>{this.props.navigation.openDrawer()}}>
                     <Image style={styles.menuBottom}  source={require('../../assets/photos/More.png')}/>
                 </TouchableOpacity>
-                <Text>{strings.sections}</Text>
+                <Text style={styles.navTitle}>{strings.sections}</Text>
                 <Image style={styles.cartBottom}  source={require('../../assets/photos/Cart.png')}/>
             </View>
             <View style={styles.sectionContainer}>
@@ -62,7 +63,7 @@ export default class sectionScreen extends React.Component {
                 />
                 <View>
                     <View style={styles.sectionTitleView}>
-                        <Text style={styles.sectionTitle}>{strings.electronicsection}</Text>
+                        <Text style={styles.sectionTitle}>{data[this.state.sectionIndex].sectionName}</Text>
                     </View>
                     <FlatList
                     style={styles.insection}

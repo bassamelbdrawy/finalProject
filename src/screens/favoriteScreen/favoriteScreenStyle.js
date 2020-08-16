@@ -31,13 +31,12 @@ const styles = StyleSheet.create({
         textAlign:'center',
         fontSize:18,
     },
-    scrollViewContainer:{
+    Container:{
         backgroundColor:'#F5F6F8',
+        flex:1,
     },
     favoriteContainer:{
         flexDirection:'row',
-       
-        
         maxWidth:scale(360)
 
     }

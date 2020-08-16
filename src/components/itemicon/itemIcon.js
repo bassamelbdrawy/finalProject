@@ -4,9 +4,9 @@ import {styles} from './itemIconStyle';
 
 
 
-function ItemIcon({image,product,category,price,onClick=() => {}}){
+function ItemIcon({image,product,category, key, price,onClick=() => {}}){
     return(
-        <TouchableOpacity style={styles.container} onPress={() => onClick()}>
+        <TouchableOpacity style={styles.container} onPress={() => onClick()} key={key}>
             <View style={styles.priceview}>
                 <Text style={styles.price}>{price}</Text>
             </View>

@@ -4,15 +4,15 @@ import {styles} from './storeIconStyle';
 
 
 
-function StoreIcon({storeName,rate,image}){
+function StoreIcon({storeName,rate,key,image,onClick=() => {}}){
     return(
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={() => onClick()} key={key}>
             <Image style={styles.storeImage} source={image}/>
             <View style={styles.storeText}>
               <Text style={styles.storeName}> {storeName} </Text>
               <Text style={styles.rate}> {rate} </Text>
             </View> 
-        </View>
+        </TouchableOpacity>
     )
 
 }

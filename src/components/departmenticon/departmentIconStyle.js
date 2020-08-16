@@ -23,7 +23,8 @@ export const styles = StyleSheet.create({
       tintColor: '#fff'
     },
     departmentName:{
-      maxWidth:scale(55)
+      maxWidth:scale(55),
+      color:'#0F3447'
     },
     pressedView: {
       backgroundColor: '#FFDD00'

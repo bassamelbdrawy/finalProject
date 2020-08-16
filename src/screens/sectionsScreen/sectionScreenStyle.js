@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
         justifyContent:'space-between',
 
     },
+    navTitle:{
+        fontSize:moderateScale(18),
+        color:'#612A7B'
+    },
     cartBottom:{
         height:verticalScale(18),
         width:scale(18.54),
@@ -34,11 +38,13 @@ const styles = StyleSheet.create({
     sectionTitleView:{
         //justifyContent:'center',
         //alignItems:'center'
+
     },
     sectionTitle:{
-        fontSize:14,
         marginBottom: verticalScale(15),
-        textAlign:'left'
+        textAlign:'left',
+        fontSize:moderateScale(12),
+        color:'#612A7B'
     },
     sectionContainer:{
         flex: 1,

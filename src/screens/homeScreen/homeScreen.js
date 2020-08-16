@@ -34,6 +34,21 @@ const itemData =[
   {"productName":"product","categoryName":"category","itemIcon":require("../../assets/photos/Image13.png"),"price":"100 sr"}
 ]
 
+const sectionData =[
+  {"productName":"product","categoryName":"category","itemIcon":require("../../assets/photos/1.png"),"price":"100 sr"},
+  {"productName":"product","categoryName":"category","itemIcon":require("../../assets/photos/2.png"),"price":"100 sr"},
+  {"productName":"product","categoryName":"category","itemIcon":require("../../assets/photos/3.png"),"price":"100 sr"},
+  {"productName":"product","categoryName":"category","itemIcon":require("../../assets/photos/1.png"),"price":"100 sr"}
+]
+
+const storeData =[
+  {"storeName":"store name","storeRate":"rate","itemIcon":require("../../assets/photos/photo.png")},
+  {"storeName":"store name","storeRate":"rate","itemIcon":require("../../assets/photos/photo.png")},
+  {"storeName":"store name","storeRate":"rate","itemIcon":require("../../assets/photos/photo.png")},
+  {"storeName":"store name","storeRate":"rate","itemIcon":require("../../assets/photos/photo.png")}
+]
+  
+
 export default class homeScreen extends React.Component {
 
 renderDepartmentsItems=({item}) =>{
@@ -45,6 +60,18 @@ renderDepartmentsItems=({item}) =>{
 renderItemItems=({item})=>{
   return(
     <ItemIcon product={item.productName} category={item.categoryName} price={item.price} image={item.itemIcon} />
+  )
+}
+
+renderSectionItems=({item})=>{
+  return(
+    <ItemIcon product={item.productName} category={item.categoryName} price={item.price} image={item.itemIcon} />
+  )
+}
+
+renderStoreItems=({item})=>{
+  return(
+    <StoreIcon  storeName={item.storeName} rate={item.storeRate} image={item.itemIcon}/>
   )
 }
 
@@ -65,9 +92,9 @@ renderItemItems=({item})=>{
         <View style={styles.departments}>
           <View style = {styles.ad}>
               <Image style={styles.adPhoto} source={require('../../assets/photos/Base.png')}/>
-              <Text style={{textAlign:'left',marginTop:20,marginLeft:20,color:'white'}}>{strings.adArea}</Text>
-              <Text style={{textAlign:'left',marginLeft:20,color:'white'}}>{strings.news}</Text>
-              <Text style={{textAlign:'left',marginLeft:20,color:'white'}}>{strings.here}</Text>
+              <Text style={{textAlign:'left',marginTop:20,marginLeft:20,color:'white',fontSize:moderateScale(23)}}>{strings.adArea}</Text>
+              <Text style={{textAlign:'left',marginLeft:20,color:'white',fontSize:moderateScale(19)}}>{strings.news}</Text>
+              <Text style={{textAlign:'left',marginLeft:20,color:'white',fontSize:moderateScale(14)}}>{strings.here}</Text>
               <View style={{marginLeft:20,marginTop:90}}>
                 <MoreIcon text={strings.more}/>
               </View>  
@@ -84,7 +111,7 @@ renderItemItems=({item})=>{
         </View>
         <View style={styles.itemsContainer}>
            <View style={styles.itemsTitle}>
-             <Text>{strings.newArrivel}</Text>
+             <Text style={{fontSize:moderateScale(20),color:'#6954A3'}}>{strings.newArrivel}</Text>
              <MoreIcon text = {strings.more} />
            </View>
            <FlatList
@@ -101,25 +128,31 @@ renderItemItems=({item})=>{
         </View>
         <View style={styles.itemsContainer}>
            <View style={styles.itemsTitle}>
-             <Text>{strings.sectionName}</Text>
+             <Text style={{fontSize:moderateScale(20),color:'#6954A3'}}>{strings.sectionName}</Text>
              <MoreIcon text = {strings.more} />
            </View>
-           <View style={styles.itemsList}>
-             <ItemIcon product ={strings.product}  category= {strings.category} price={strings.sr100} image={require('../../assets/photos/1.png')}/>
-             <ItemIcon product ={strings.product}  category= {strings.category} price={strings.sr100} image={require('../../assets/photos/2.png')}/>
-             <ItemIcon product ={strings.product}  category= {strings.category} price={strings.sr100} image={require('../../assets/photos/3.png')}/>
-            </View>
+           <FlatList
+                    style={styles.itemsList}
+                    numColumns={1}
+                    horizontal={true}
+                    ItemSeparatorComponent={() => <View style={{width: scale(5)}}/>}
+                    data={sectionData}
+                    renderItem={this.renderSectionItems}
+                    />
            <View style={styles.adImageView}>
              <Image style={styles.adImage} source={require('../../assets/photos/4.png')}/>
+             <View style={{height:verticalScale(10)}}/>
            </View>
         </View>
         <View style={styles.storeView}>
           <Text style={styles.storeText}> {strings.mostImportantStore}</Text>
-          <View style={styles.storeList}>
-          <StoreIcon image={require('../../assets/photos/photo.png')} storeName={strings.storeName} rate={strings.rate} />
-          <StoreIcon image={require('../../assets/photos/photo.png')} storeName={strings.storeName} rate={strings.rate} />
-          <StoreIcon image={require('../../assets/photos/photo.png')} storeName={strings.storeName} rate={strings.rate} />
-          </View>
+          <FlatList
+                    style={styles.storeList}
+                    numColumns={1}
+                    horizontal={true}
+                    data={storeData}
+                    renderItem={this.renderStoreItems}
+                    />
         </View>
       
      

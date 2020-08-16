@@ -85,9 +85,7 @@ const styles = StyleSheet.create({
         marginTop:verticalScale(10),
         marginBottom:verticalScale(10)
     },
-    adImageView:{
-        height:verticalScale(145),
-        width:scale(360),
+    adImageView:{  
         alignItems:'center'
     },
     adImage:{
@@ -96,17 +94,17 @@ const styles = StyleSheet.create({
         resizeMode:'contain'
     },
     storeView:{
-        width:scale(360),
-        height:verticalScale(132)
+         
     },
     storeText:{
         textAlign:'left',
         marginTop:verticalScale(10),
-        marginLeft:scale(10)
+        marginLeft:scale(10),
+        fontSize:moderateScale(20),
+        color:'#6954A3'
     },
     storeList:{
-        flexDirection:'row',
-        justifyContent:'space-between',
+        
     }
   
   });

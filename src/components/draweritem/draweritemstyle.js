@@ -21,7 +21,9 @@ export const styles = StyleSheet.create({
     },
     moreName:{
         textAlign: 'left',
-        maxWidth:scale(94)
+        maxWidth:scale(94),
+        fontSize:moderateScale(15),
+        color:'#612A7B'
     },
     moreImage:{
         width:scale(18),

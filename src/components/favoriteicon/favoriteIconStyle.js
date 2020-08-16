@@ -27,7 +27,8 @@ export const styles = StyleSheet.create({
         marginTop:verticalScale(5),
         marginLeft:scale(10),
         fontSize:16,
-        maxWidth:scale(70)
+        maxWidth:scale(70),
+        color:'#4B6584'
     },
     priceView:{
         flexDirection:'row',

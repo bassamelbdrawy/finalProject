@@ -9,8 +9,8 @@ function UserNameIcon({image,username,email}){
         <View style={styles.container}>
             <Image style={styles.userphoto} source={image}/>
             <View style={styles.userdetails}>
-                <Text>{username}</Text>
-                <Text>{email}</Text>
+                <Text style={styles.username}>{username}</Text>
+                <Text style={styles.email}>{email}</Text>
             </View>
         </View>
     )

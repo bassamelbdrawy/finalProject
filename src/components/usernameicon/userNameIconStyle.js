@@ -21,6 +21,14 @@ export const styles = StyleSheet.create({
     userdetails:{
         flexDirection:'column',
         marginLeft:scale(10)
+    },
+    username:{
+        fontSize:moderateScale(18),
+        color:'#612A7B',
+    },
+    email:{
+      fontSize:moderateScale(12),
+      color:'#515C6F'
     }
  
   });

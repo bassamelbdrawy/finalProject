@@ -5,7 +5,7 @@ import styles from './drawercontentstyle';
 import UserNameIcon from '../../../components/usernameicon/userNameIcon';
 import DrawerItem from '../../../components/draweritem/draweritem';
 import strings from '../../../localize/';
-import { verticalScale } from '../../../helper/scaling';
+import { verticalScale, moderateScale } from '../../../helper/scaling';
 
 
 export default function DrawerContent(props){
@@ -38,7 +38,7 @@ export default function DrawerContent(props){
                     <DrawerItem text={strings.whoarewe} image={require('../../../assets/photos/man.png')}/>
                     <DrawerItem text={strings.contactus} image={require('../../../assets/photos/Messages.png')}/>
                 </View>
-                <Text style={{textAlign:'center', marginTop:verticalScale(40)}}>{strings.logout}</Text>
+                <Text style={{textAlign:'center', marginTop:verticalScale(40),fontsize:moderateScale(14),color:'#612A7B'}}>{strings.logout}</Text>
             </DrawerContentScrollView> 
     );
 }

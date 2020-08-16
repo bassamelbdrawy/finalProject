@@ -35,14 +35,19 @@ export const styles = StyleSheet.create({
     product:{
         textAlign:'left',
         marginTop:verticalScale(5),
-        maxWidth:scale(55)
+        maxWidth:scale(55),
+        fontSize:moderateScale(11),
+        color:'#6954A3',
     },
     category:{
         textAlign:'left',
-        maxWidth:scale(55)
+        maxWidth:scale(55),
+        fontSize:moderateScale(10),
+        color:'#A5B1C2',
     },
     price:{
         fontSize:8,
+        color:'#612A7B'
     }
   
   });

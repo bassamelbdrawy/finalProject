@@ -25,5 +25,8 @@ export const styles = StyleSheet.create({
         width:scale(5.17),
         height:verticalScale(9.04),
         transform: direction, 
+    },
+    moreName:{
+      color:'#6954A3'
     }
   });

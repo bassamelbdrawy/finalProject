@@ -5,13 +5,8 @@ import {scale,verticalScale,moderateScale} from '../../helper/scaling';
 
 export const styles = StyleSheet.create({
     container: {
-      width:scale(135),
-      height:verticalScale(90),
       flexDirection:'row',
       alignItems:'center',
-      justifyContent:'center',
-      marginTop:verticalScale(10),
-      marginRight:scale(10) 
     },
     storeImage:{
       width:130,
@@ -20,13 +15,18 @@ export const styles = StyleSheet.create({
     },
     storeText:{
       flexDirection:'column',
-      marginLeft:scale(-20),
+      marginLeft:scale(-20)
+      
     },
     storeNmae:{
       textAlign:'left',
+      fontSize:moderateScale(18),
+      color:'#0F3447'
     },
     rate:{
-      textAlign:'left'
+      textAlign:'left',
+      fontSize:moderateScale(15),
+      color:'#646768'
     }
   
   });
