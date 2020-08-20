@@ -10,13 +10,29 @@ import { ScrollView } from 'react-native-gesture-handler';
 import FavoriteIcon from '../../components/favoriteicon/favoriteIcon'
 
 
+const barData=[
+    {"itemName":"All"},
+    {"itemName":"MostWatched"},
+    {"itemName":"CategoryName"},
+    {"itemName":"CategoryName"}
+]
+
+
 export default class sectionDetailsScreen extends React.Component {
 
 
 renderSectionDetailsItems=({item})=>{
     return(
         <TouchableOpacity onPress ={()=>{this.props.navigation.navigate('itemDetailsScreen',{productName:item.productName})}}>
-        <FavoriteIcon product={item.productName} price={item.price} image={item.image} favoriteLogo={require('../../assets/photos/star.png')} />
+            <FavoriteIcon product={item.productName} price={item.price} image={item.image} favoriteLogo={require('../../assets/photos/star.png')} />
+        </TouchableOpacity>
+    )
+}
+
+renderBarItems=({item})=>{
+    return(
+        <TouchableOpacity>
+            <Text style={styles.barText}>{item.itemName}</Text>
         </TouchableOpacity>
     )
 }
@@ -31,10 +47,23 @@ renderSectionDetailsItems=({item})=>{
                 <Text style={{fontSize:moderateScale(18),color:'#612A7B'}}>{this.props.route.params.itemname}</Text>
                 <Image style={styles.cartBottom}  source={require('../../assets/photos/Cart.png')}/>
             </View>
+            <View style={styles.itemBar}>
+                <View style={styles.sort}>
+                    <Image style={styles.barIcon} source={require('../../assets/photos/20.png')}/>
+                </View>
+                <FlatList
+                      style={styles.barContainer}
+                      contentContainerStyle={styles.insideList}
+                      numColumns={1}
+                      horizontal={true}
+                      ItemSeparatorComponent={() => <View style={{width: scale(30)}}/>}
+                      data={barData}
+                      renderItem={this.renderBarItems}
+                      />
+            </View>
             <View style={styles.Container}>
               <FlatList
                       style={styles.favoriteContainer}
-                      contentContainerStyle={styles.insideList}
                       numColumns={2}
                       ItemSeparatorComponent={() => <View style={{width: scale(5)}}/>}
                       data={this.props.route.params.extradata}

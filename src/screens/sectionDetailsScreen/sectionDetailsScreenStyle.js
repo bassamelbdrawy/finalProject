@@ -41,6 +41,32 @@ const styles = StyleSheet.create({
       favoriteContainer:{
           backgroundColor:'#F5F6F8',
       },
+      itemBar:{
+          height:verticalScale(50),
+          flexDirection:'row',
+      },
+      sort:{
+         backgroundColor:'#612A7B',
+         height:verticalScale(50),
+         width:scale(50),
+         alignItems:'center',
+         justifyContent:'center'
+      },
+      barIcon:{
+          width:scale(14),
+          height:verticalScale(14)
+      },
+      barContainer:{
+         backgroundColor:'white'
+      },
+      insideList:{
+          alignItems:'center',
+          marginLeft:scale(15)
+      },
+      barText:{
+          fontSize:13,
+          color:'#727C8E'
+      }
   });
 
   export default styles;
