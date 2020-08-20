@@ -1,5 +1,8 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet,I18nManager } from 'react-native';
 import {scale,verticalScale,moderateScale} from '../../helper/scaling';
+
+
+const direction = I18nManager.isRTL ? [] : [{rotateY: '180deg'}];
 
 const styles = StyleSheet.create({
     container:{
@@ -24,7 +27,8 @@ const styles = StyleSheet.create({
         height:verticalScale(12),
         width:scale(18),
         resizeMode: 'contain',
-        marginLeft:scale(20)
+        marginLeft:scale(20),
+        transform:direction
         
     },
     navtext:{
@@ -32,14 +36,11 @@ const styles = StyleSheet.create({
         fontSize:18,
     },
     Container:{ 
-      flex:1,   
-    },
-    favoriteContainer:{
-        backgroundColor:'#F5F6F8',
-    },
-    insideList:{
-       
-    }
+        flex:1,   
+      },
+      favoriteContainer:{
+          backgroundColor:'#F5F6F8',
+      },
   });
 
   export default styles;

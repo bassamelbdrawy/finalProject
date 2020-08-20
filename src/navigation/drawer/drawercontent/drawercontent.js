@@ -22,15 +22,10 @@ export default function DrawerContent(props){
                     <Image style={styles.settingIcon} source={require('../../../assets/photos/Outline.png')} />
                 </View>   
                 <View style={styles.drawerItems}>
-                    <TouchableOpacity onPress={()=>{props.navigation.navigate('homeStack')}}>
-                        <DrawerItem text={strings.homepage} image={require('../../../assets/photos/Home.png')}/>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={()=>{props.navigation.navigate('sectionStack')}}>
-                        <DrawerItem text={strings.sections} image={require('../../../assets/photos/rate.png')}/>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={()=>{props.navigation.navigate('favoriteStack')}}>
-                        <DrawerItem text={strings.favourite} image={require('../../../assets/photos/Path114.png')}/>
-                    </TouchableOpacity>
+                  
+                    <DrawerItem text={strings.homepage} image={require('../../../assets/photos/Home.png')} onClick={()=>{props.navigation.navigate('homeStack')}}/>
+                    <DrawerItem text={strings.sections} image={require('../../../assets/photos/rate.png')} onClick={()=>{props.navigation.navigate('sectionStack')}}/>
+                    <DrawerItem text={strings.favourite} image={require('../../../assets/photos/Path114.png')} onClick={()=>{props.navigation.navigate('favoriteStack')}}/>
                     <DrawerItem text={strings.busket} image={require('../../../assets/photos/finished.png')}/>
                     <DrawerItem text={strings.search} image={require('../../../assets/photos/Search.png')}/>
                 </View>

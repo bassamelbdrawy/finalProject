@@ -2,7 +2,7 @@
 import React from 'react';
 import{Text,SafeAreaView,View,TouchableOpacity,Image,FlatList} from 'react-native';
 import DepartmentIcon from '../../components/departmenticon/departmenIcon';
-import styles from './favoriteScreenStyle';
+import styles from './sectionDetailsScreenStyle';
 import strings from '../../localize/index';
 import DrawerItem from '../../components/draweritem/draweritem';
 import { verticalScale, scale, moderateScale } from '../../helper/scaling';
@@ -10,28 +10,25 @@ import { ScrollView } from 'react-native-gesture-handler';
 import FavoriteIcon from '../../components/favoriteicon/favoriteIcon'
 
 
-const favoriteData=[
-  {"productName":"product","price":"100 sr","productIcon":require("../../assets/photos/N11045962A_1.png")},
-  {"productName":"product","price":"100 sr","productIcon":require("../../assets/photos/N11045962A_1.png")},
-  {"productName":"product","price":"100 sr","productIcon":require("../../assets/photos/N11045962A_1.png")},
-]
+export default class sectionDetailsScreen extends React.Component {
 
-export default class favoriteScreen extends React.Component {
 
-  renderFavoriteItems=({item})=>{
+renderSectionDetailsItems=({item})=>{
     return(
-      <FavoriteIcon product={item.productName} price={item.price} image={item.productIcon} favoriteLogo={require('../../assets/photos/Path113.png')}/>
+        <TouchableOpacity onPress ={()=>{this.props.navigation.navigate('itemDetailsScreen',{productName:item.productName})}}>
+        <FavoriteIcon product={item.productName} price={item.price} image={item.image} favoriteLogo={require('../../assets/photos/star.png')} />
+        </TouchableOpacity>
     )
-  }
+}
 
   render() {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.nav}>
-                <TouchableOpacity onPress={()=>{this.props.navigation.openDrawer()}}>
-                    <Image style={styles.menuBottom}  source={require('../../assets/photos/More.png')}/>
+                <TouchableOpacity onPress={()=>{this.props.navigation.pop()}}>
+                    <Image style={styles.menuBottom}  source={require('../../assets/photos/arr.png')}/>
                 </TouchableOpacity>
-                <Text style={{fontSize:moderateScale(18),color:'#612A7B'}}>{strings.favourite}</Text>
+                <Text style={{fontSize:moderateScale(18),color:'#612A7B'}}>{this.props.route.params.itemname}</Text>
                 <Image style={styles.cartBottom}  source={require('../../assets/photos/Cart.png')}/>
             </View>
             <View style={styles.Container}>
@@ -40,8 +37,8 @@ export default class favoriteScreen extends React.Component {
                       contentContainerStyle={styles.insideList}
                       numColumns={2}
                       ItemSeparatorComponent={() => <View style={{width: scale(5)}}/>}
-                      data={favoriteData}
-                      renderItem={this.renderFavoriteItems}
+                      data={this.props.route.params.extradata}
+                      renderItem={this.renderSectionDetailsItems}
                       />
             </View>
         </SafeAreaView>

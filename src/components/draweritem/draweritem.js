@@ -3,9 +3,9 @@ import {Text,View,SafeAreaView, TouchableOpacity, I18nManager,Image,StyleSheet} 
 import {styles} from './draweritemstyle';
 
 
-function DrawerItem({text,image, outerContainerStyle, innerContainerStyle,textStyle}){
+function DrawerItem({text,image, outerContainerStyle, innerContainerStyle,textStyle,key, onClick=() => {}}){
     return(
-        <View style={[styles.container, outerContainerStyle]}>
+        <TouchableOpacity style={[styles.container, outerContainerStyle]} onPress={() => onClick()} key={key}>
             <View style={styles.imageAndTextContainer}>
             {
                 image && <Image style={styles.itemicon} source={image}/>
@@ -15,7 +15,7 @@ function DrawerItem({text,image, outerContainerStyle, innerContainerStyle,textSt
             <View style={[styles.moreImage, innerContainerStyle]}>
                 <Image style={styles.arrowStyle} source={require('../../assets/photos/Path11.png')} />
             </View>
-        </View>
+        </TouchableOpacity>
     )
 
 }

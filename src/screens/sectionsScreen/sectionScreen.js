@@ -8,9 +8,9 @@ import DrawerItem from '../../components/draweritem/draweritem';
 import { verticalScale, scale, moderateScale } from '../../helper/scaling';
 
 const data =  [
-    {"sectionName": "electronics", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"phones"},{"itemName":"laptop"}]},
-    {"sectionName": "beauty", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"clothes"},{"itemName":"shoes"}]},
-    {"sectionName": "sounds", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"headphones"},{"itemName":"speakers"}]}
+    {"sectionName": "electronics", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"phones","extraData":[{"productName":"product","price":"100 sr","image":require("../../assets/photos/N11045962A_1.png")},{"productName":"product","price":"100 sr","image":require("../../assets/photos/N11045962A_1.png")}]},{"itemName":"laptop","extraData":[]}]},
+    {"sectionName": "beauty", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"clothes","extraData":[]},{"itemName":"shoes","extraData":[]}]},
+    {"sectionName": "sounds", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"headphones","extraData":[]},{"itemName":"speakers","extraData":[]}]}
 ]
 export default class sectionScreen extends React.Component {
     state = {
@@ -37,6 +37,7 @@ export default class sectionScreen extends React.Component {
             <DrawerItem
                 text={item.itemName} 
                 textStyle={{fontSiza:moderateScale(14),color:'#4B6584'}}
+                onClick={()=>{this.props.navigation.navigate('sectionDetailsScreen',{itemname:item.itemName,extradata:item.extraData})}}
             />
         )
     }

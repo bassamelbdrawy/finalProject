@@ -24,6 +24,7 @@ const departmentData =  [
   {"sectionName": "beauty", "sectionIcon": require("../../assets/photos/Beauty.png"), "sectionItems":[{"itemName":"clothes"},{"itemName":"shoes"}]},
   {"sectionName": "sounds", "sectionIcon": require("../../assets/photos/Furniture.png"), "sectionItems":[{"itemName":"headphones"},{"itemName":"speakers"}]},
   {"sectionName": "beauty", "sectionIcon": require("../../assets/photos/Beauty.png"), "sectionItems":[{"itemName":"clothes"},{"itemName":"shoes"}]},
+  {"sectionName": "electronics", "sectionIcon": require("../../assets/photos/Electronics.png"), "sectionItems":[{"itemName":"phones"},{"itemName":"laptop"}]},
   
 ]
 
@@ -100,7 +101,7 @@ renderStoreItems=({item})=>{
               </View>  
           </View>
           <FlatList
-                    style={{marginTop:verticalScale(25)}}
+                    style={{marginTop:verticalScale(25),flex:1}}
                     contentContainerStyle={styles.departmentList}
                     numColumns={1}
                     horizontal={true}

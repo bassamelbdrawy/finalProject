@@ -61,14 +61,12 @@ const styles = StyleSheet.create({
     ,
     departments:{
         height:verticalScale(158),
-        width:scale(410),
         backgroundColor:'white',
 
     },
     departmentList:{
         marginRight:scale(20),
-        marginLeft:scale(20),
-        
+        marginLeft:scale(20), 
     },
     itemsContainer:{
         backgroundColor:'#F5F6F8',
