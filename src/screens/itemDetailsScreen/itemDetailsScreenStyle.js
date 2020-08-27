@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     },
     Container:{ 
         backgroundColor:'white',
-        height:verticalScale(313),
+        height:verticalScale(300),
         alignItems:'center'
       },
     productImage:{
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     rateAndPrice:{
         flexDirection:'row',
         marginTop:scale(10),
+        
    },
     priceView:{
         width:scale(55),
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
         borderRadius:verticalScale(8),
         alignItems:'center',
         justifyContent:'center',
-        marginLeft:scale(20)
+       
     },
     rateView:{
         width:scale(37),
@@ -70,7 +71,8 @@ const styles = StyleSheet.create({
         backgroundColor:'#612A7B',
         borderRadius:verticalScale(8),
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        marginLeft:scale(10)
     },
     productPrice:{
         fontSize:moderateScale(11),
@@ -79,6 +81,16 @@ const styles = StyleSheet.create({
     productRate:{
         fontSize:moderateScale(11),
         color:'white'
+    },
+    descView:{
+        flexDirection:'row',
+        width:scale(360),
+        justifyContent:'space-around',
+        marginTop:verticalScale(40)
+    },
+    descDataStyle:{
+        flex:1,
+        backgroundColor:'#F5F6F8',
     }
   });
 

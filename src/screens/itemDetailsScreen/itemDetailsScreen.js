@@ -33,8 +33,21 @@ export default class itemDetailsScreen extends React.Component {
                     <View style={styles.rateView}>
                         <Text style={styles.productRate}>4.9</Text>
                     </View>  
-                </View>
-                
             </View>
+            <View style={styles.descView}>
+                    <TouchableOpacity>
+                        <Text style={{fontSize:moderateScale(13),color:'#727C8E'}}>Description</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text style={{fontSize:moderateScale(13),color:'#727C8E'}}>Comments</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text style={{fontSize:moderateScale(13),color:'#727C8E'}}>Others</Text>
+                    </TouchableOpacity>
+            </View>  
+        </View>
+        <View style={styles.descDataStyle}>
+
+        </View>   
         </SafeAreaView>
     )}};
