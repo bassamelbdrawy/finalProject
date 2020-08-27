@@ -8,7 +8,7 @@ import DrawerItem from '../../components/draweritem/draweritem';
 import { verticalScale, scale, moderateScale } from '../../helper/scaling';
 
 const data =  [
-    {"sectionName": "electronics", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"phones","extraData":[{"productName":"product","price":"100 sr","image":require("../../assets/photos/N11045962A_1.png")},{"productName":"product","price":"100 sr","image":require("../../assets/photos/N11045962A_1.png")}]},{"itemName":"laptop","extraData":[]}]},
+    {"sectionName": "electronics", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"phones","extraData":[{"productName":"product","price":"100 sr","image":require("../../assets/photos/N11045962A_1.png")},{"productName":"product","price":"50 sr","image":require("../../assets/photos/N11045962A_1.png")}]},{"itemName":"laptop","extraData":[]}]},
     {"sectionName": "beauty", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"clothes","extraData":[]},{"itemName":"shoes","extraData":[]}]},
     {"sectionName": "sounds", "sectionIcon": require("../../assets/photos/11.png"), "sectionItems":[{"itemName":"headphones","extraData":[]},{"itemName":"speakers","extraData":[]}]}
 ]

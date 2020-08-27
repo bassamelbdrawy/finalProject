@@ -23,6 +23,18 @@ export default class itemDetailsScreen extends React.Component {
                 <Text style={{fontSize:moderateScale(18),color:'#612A7B'}}>{this.props.route.params.productName}</Text>
                 <Image style={styles.cartBottom}  source={require('../../assets/photos/Cart.png')}/>
             </View>
-            <Text>hello</Text>
+            <View style={styles.Container}>
+                <Image style={styles.productImage} source={this.props.route.params.image}/>
+                <Text style={styles.productName}>{this.props.route.params.productName}</Text>
+                <View style={styles.rateAndPrice}>
+                    <View style={styles.priceView}>
+                        <Text style={styles.productPrice}>{this.props.route.params.price}</Text>
+                    </View>
+                    <View style={styles.rateView}>
+                        <Text style={styles.productRate}>4.9</Text>
+                    </View>  
+                </View>
+                
+            </View>
         </SafeAreaView>
     )}};

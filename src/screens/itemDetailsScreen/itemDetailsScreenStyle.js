@@ -36,11 +36,50 @@ const styles = StyleSheet.create({
         fontSize:18,
     },
     Container:{ 
-        flex:1,   
+        backgroundColor:'white',
+        height:verticalScale(313),
+        alignItems:'center'
       },
-      favoriteContainer:{
-          backgroundColor:'#F5F6F8',
-      },
+    productImage:{
+        marginTop:verticalScale(5),
+        width:scale(117),
+        height:verticalScale(157),
+        resizeMode:'contain'
+    },
+    productName:{
+        fontSize:moderateScale(20),
+        color:'#4B6584',
+        marginTop:verticalScale(25)
+    },
+    rateAndPrice:{
+        flexDirection:'row',
+        marginTop:scale(10),
+   },
+    priceView:{
+        width:scale(55),
+        height:verticalScale(16),
+        backgroundColor:'#612A7B',
+        borderRadius:verticalScale(8),
+        alignItems:'center',
+        justifyContent:'center',
+        marginLeft:scale(20)
+    },
+    rateView:{
+        width:scale(37),
+        height:verticalScale(16),
+        backgroundColor:'#612A7B',
+        borderRadius:verticalScale(8),
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    productPrice:{
+        fontSize:moderateScale(11),
+        color:'#FFDD00'
+    },
+    productRate:{
+        fontSize:moderateScale(11),
+        color:'white'
+    }
   });
 
   export default styles;

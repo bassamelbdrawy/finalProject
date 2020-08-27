@@ -23,7 +23,7 @@ export default class sectionDetailsScreen extends React.Component {
 
 renderSectionDetailsItems=({item})=>{
     return(
-        <TouchableOpacity onPress ={()=>{this.props.navigation.navigate('itemDetailsScreen',{productName:item.productName})}}>
+        <TouchableOpacity onPress ={()=>{this.props.navigation.navigate('itemDetailsScreen',{productName:item.productName,price:item.price,image:item.image})}}>
             <FavoriteIcon product={item.productName} price={item.price} image={item.image} favoriteLogo={require('../../assets/photos/star.png')} />
         </TouchableOpacity>
     )
