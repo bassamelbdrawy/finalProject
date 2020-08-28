@@ -91,6 +91,64 @@ const styles = StyleSheet.create({
     descDataStyle:{
         flex:1,
         backgroundColor:'#F5F6F8',
+    },
+    descText:{
+        fontSize:moderateScale(12),
+        color:'#4B6584',
+        marginLeft:scale(20),
+        marginTop:scale(20),
+        maxWidth:scale(315)
+    },
+    moveBar:{
+        flexDirection:'row',
+        width:scale(360),
+        justifyContent:'space-around',
+        backgroundColor:'#F5F6F8',
+        position:'absolute',
+        marginTop:verticalScale(580),
+    },
+    addCart:{
+        width:scale(157),
+        height:verticalScale(44),
+        borderRadius:verticalScale(22),
+        backgroundColor:'#FFDD00',
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-around'
+    },
+    share:{
+        width:scale(157),
+        height:verticalScale(44),
+        borderRadius:verticalScale(22),
+        backgroundColor:'white',
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-around'
+    },
+    cartView:{
+        width:scale(28),
+        height:scale(28),
+        borderRadius:scale(14),
+        backgroundColor:'white',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    shareView:{
+        width:scale(28),
+        height:scale(28),
+        borderRadius:scale(14),
+        backgroundColor:'#612A7B',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    cartText:{
+        fontSize:moderateScale(15),
+        color:'#612A7B',
+        marginRight:scale(20)
+    },
+    shareText:{
+        fontSize:moderateScale(13),
+        color:'#612A7B',
     }
   });
 
