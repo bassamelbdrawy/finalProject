@@ -3,19 +3,18 @@ import { createStackNavigator } from '@react-navigation/stack';
 import sectionScreen from '../../screens/sectionsScreen/sectionScreen';
 import sectionDetailsScreen from '../../screens/sectionDetailsScreen/sectionDetailsScreen';
 import itemDetailsScreen from '../../screens/itemDetailsScreen/itemDetailsScreen';
-import loginStack from '../../navigation/loginStack/loginStack';
+import loginScreen from '../../screens/loginScreen/loginScreen';
+import registerScreen from '../../screens/registerScreen/registerScreen';
 
 const Stack = createStackNavigator();
 
-function sectionStack() {
+function loginStack() {
     return (
         <Stack.Navigator headerMode='none'>
-          <Stack.Screen name="sectionScreen" component={sectionScreen} />
-          <Stack.Screen name="sectionDetailsScreen" component={sectionDetailsScreen}/>
-          <Stack.Screen name="itemDetailsScreen" component={itemDetailsScreen}/>
-          <Stack.Screen name="loginStack" component={loginStack}/>
+          <Stack.Screen name="loginScreen" component={loginScreen} />
+          <Stack.Screen name='registerScreen' component={registerScreen} />
         </Stack.Navigator>
     );
   }
 
-  export default sectionStack;
+  export default loginStack;

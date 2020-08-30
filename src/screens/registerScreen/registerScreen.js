@@ -2,7 +2,7 @@
 import React from 'react';
 import{Text,SafeAreaView,View,TouchableOpacity,Image,FlatList} from 'react-native';
 import DepartmentIcon from '../../components/departmenticon/departmenIcon';
-import styles from './loginScreenStyle';
+import styles from './registerScreenStyle';
 import strings from '../../localize/index';
 import DrawerItem from '../../components/draweritem/draweritem';
 import { verticalScale, scale, moderateScale } from '../../helper/scaling';
@@ -11,7 +11,7 @@ import FavoriteIcon from '../../components/favoriteicon/favoriteIcon'
 import LoginIcon from '../../components/loginIcon/loginIcon';
 
 
-export default class loginScreen extends React.Component {
+export default class registerScreen extends React.Component {
 
     state={
         email:'',
@@ -29,6 +29,9 @@ export default class loginScreen extends React.Component {
   render() {
     return (
         <SafeAreaView style={styles.container}>
+            <TouchableOpacity onPress={()=>{this.props.navigation.pop()}}>
+                    <Image style={styles.menuBottom}  source={require('../../assets/photos/arr.png')}/>
+            </TouchableOpacity>
            <Image style={styles.logo} source={require('../../assets/photos/Group161.png')}/>
            <View style={styles.email}>
                 <Image style={styles.emailIcon} source={require('../../assets/photos/at.png')} />
@@ -57,7 +60,7 @@ export default class loginScreen extends React.Component {
                 </View>
            </View>
            <View  style={styles.login}>
-              <LoginIcon text='Login'/>
+              <LoginIcon text='register'/>
            </View>
            <TouchableOpacity>
                <Text style={styles.forget}>Forget Password?</Text>

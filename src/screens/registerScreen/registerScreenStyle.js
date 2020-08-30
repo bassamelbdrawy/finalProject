@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         resizeMode:'contain',
         width:scale(176),
         height:verticalScale(50),
-        marginTop:verticalScale(130)
+        marginTop:verticalScale(105)
     },
     email:{
         width:scale(325),
@@ -64,6 +64,15 @@ const styles = StyleSheet.create({
         marginTop:verticalScale(20),
         fontSize:moderateScale(13),
         color:'#612A7B'
+    },
+    menuBottom:{
+        height:verticalScale(12),
+        width:scale(18),
+        resizeMode: 'contain',
+        transform:direction,
+        marginRight:scale(285),
+        marginTop:verticalScale(15)
+        
     }
   });
 

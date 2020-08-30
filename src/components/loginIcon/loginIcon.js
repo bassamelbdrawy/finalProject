@@ -3,14 +3,14 @@ import {Text,View,SafeAreaView, TouchableOpacity, I18nManager,Image,StyleSheet} 
 import {styles} from './loginIconStyle';
 
 
-function LoginIcon({text, outerContainerStyle, innerContainerStyle}){
+function LoginIcon({text, outerContainerStyle, innerContainerStyle,onClick=()=>{}}){
     return(
-        <View style={[styles.container, outerContainerStyle]}>
+        <TouchableOpacity style={[styles.container, outerContainerStyle]} onPress={onClick()}>
             <Text style={styles.moreName}> {text} </Text>
             <View style={[styles.moreImage, innerContainerStyle]}>
                 <Image style={styles.arrowStyle} source={require('../../assets/photos/Path11.png')} />
             </View>
-        </View>
+        </TouchableOpacity>
     )
 
 }

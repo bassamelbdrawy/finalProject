@@ -59,7 +59,7 @@ export default class itemDetailsScreen extends React.Component {
             <Text style={styles.descText}>{descData[this.state.index].itemText}</Text>
         </View>   
         <View style={styles.moveBar}>
-            <TouchableOpacity style={styles.addCart} onPress={()=>{this.props.navigation.navigate('loginScreen')}}>
+            <TouchableOpacity style={styles.addCart} onPress={()=>{this.props.navigation.navigate('loginStack')}}>
                 <View style={styles.cartView}>
                     <Image source={require('../../assets/photos/Cart.png')}/>
                 </View>

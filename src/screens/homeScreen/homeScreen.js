@@ -104,10 +104,11 @@ renderStoreItems=({item})=>{
                     style={{marginTop:verticalScale(25),flex:1}}
                     contentContainerStyle={styles.departmentList}
                     numColumns={1}
-                    horizontal={true}
+                    horizontal
                     ItemSeparatorComponent={() => <View style={{width: scale(20)}}/>}
                     data={departmentData}
                     renderItem={this.renderDepartmentsItems}
+                    showsHorizontalScrollIndicator={false}
                     />
         </View>
         <View style={styles.itemsContainer}>
@@ -139,6 +140,7 @@ renderStoreItems=({item})=>{
                     ItemSeparatorComponent={() => <View style={{width: scale(5)}}/>}
                     data={sectionData}
                     renderItem={this.renderSectionItems}
+                    showsHorizontalScrollIndicator={false}
                     />
            <View style={styles.adImageView}>
              <Image style={styles.adImage} source={require('../../assets/photos/4.png')}/>
@@ -153,6 +155,7 @@ renderStoreItems=({item})=>{
                     horizontal={true}
                     data={storeData}
                     renderItem={this.renderStoreItems}
+                    showsHorizontalScrollIndicator={false}
                     />
         </View>
       
