@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
       backgroundColor:'#612A7B',
       flexDirection:'row',
       borderRadius:38,
-      alignItems:'center'
+      alignItems:'center',
     },
     moreImage:{
         width:28,
@@ -19,7 +19,8 @@ export const styles = StyleSheet.create({
         borderRadius:14,
         alignItems:'center',
         justifyContent:'center',
-        marginLeft:scale(100)
+        position:'absolute',
+        marginLeft:scale(300)
     },
     arrowStyle:{
         width:scale(6),
@@ -29,8 +30,8 @@ export const styles = StyleSheet.create({
     },
     moreName:{
       color:'white',
-      fontSize:moderateScale(16),
-      marginLeft:scale(150)
-      
+      fontSize:moderateScale(16),  
+      marginLeft:scale(140)
+    
     }
   });

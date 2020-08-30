@@ -14,17 +14,11 @@ import LoginIcon from '../../components/loginIcon/loginIcon';
 export default class registerScreen extends React.Component {
 
     state={
-        email:'',
-        password:''
+        username:''
     }
 
-    changeEmail=(text)=>{
-        this.setState(()=>({email:text}))
-    }
-
-    changePassword=(text)=>{
-        this.setState(()=>({password:text}))
-    }
+    changeUserName=(text)=>{
+        this.setState(()=>({username:text}))}
 
   render() {
     return (
@@ -32,41 +26,22 @@ export default class registerScreen extends React.Component {
             <TouchableOpacity onPress={()=>{this.props.navigation.pop()}}>
                     <Image style={styles.menuBottom}  source={require('../../assets/photos/arr.png')}/>
             </TouchableOpacity>
-           <Image style={styles.logo} source={require('../../assets/photos/Group161.png')}/>
-           <View style={styles.email}>
-                <Image style={styles.emailIcon} source={require('../../assets/photos/at.png')} />
-                <View style={styles.emailView}>
-                    <Text style={styles.emailText}>Email Adress</Text>
+            <Text style={styles.title}>Create Account</Text>
+            <Text style={styles.desc}>enter your information to create your account and browse it</Text>
+            <View style={styles.barsView}>
+            <View style={styles.username}>
+                <Image style={styles.usernameIcon} source={require('../../assets/photos/Profile1.png')} />
+                <View style={styles.usernameView}>
+                    <Text style={styles.usernameText}>User Name</Text>
                     <TextInput
                     secureTextEntry={false}
-                    style={styles.emailInput}
-                    value={this.state.email}
-                    onChangeText={this.changeEmail}
-                    placeholder="email"
+                    style={styles.usernameInput}
+                    value={this.state.username}
+                    onChangeText={this.changeUserName}
+                    placeholder="username"
                     />
                 </View>
            </View>
-           <View style={styles.password}>
-           <Image style={styles.emailIcon} source={require('../../assets/photos/002-password.png')} />
-                <View style={styles.emailView}>
-                    <Text style={styles.emailText}>Password</Text>
-                    <TextInput
-                    secureTextEntry={true}
-                    style={styles.emailInput}
-                    value={this.state.password}
-                    onChangeText={this.changePassword}
-                    placeholder="password"
-                    />
-                </View>
-           </View>
-           <View  style={styles.login}>
-              <LoginIcon text='register'/>
-           </View>
-           <TouchableOpacity>
-               <Text style={styles.forget}>Forget Password?</Text>
-           </TouchableOpacity>
-           <TouchableOpacity onPress={()=>{this.props.navigation.navigate('registerScreen')}}>
-               <Text style={styles.register}>Register</Text>
-           </TouchableOpacity>
+           </View>  
         </SafeAreaView>
     )}};
