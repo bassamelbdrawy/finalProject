@@ -6,6 +6,7 @@ import { Dimensions } from 'react-native';
 import homeStack from '../homestack/homeStack';
 import sectionStack from '../sectionstack/sectionStack';
 import favoriteStack from '../favoritestack/favoriteStack';
+import busketStack from '../busketStack/busketStack';
 import DrawerContent from './drawercontent/drawercontent';
 
 
@@ -20,6 +21,7 @@ function AppDrawer() {
         <Drawer.Screen name="homeStack" component={homeStack}  />
         <Drawer.Screen name="sectionStack" component={sectionStack}  />
         <Drawer.Screen name="favoriteStack" component={favoriteStack}  />
+        <Drawer.Screen name="busketStack" component={busketStack}  />
     </Drawer.Navigator>
     );
   }

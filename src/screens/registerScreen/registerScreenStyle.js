@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
         borderTopRightRadius:scale(15),
         borderTopLeftRadius:scale(15),
-        marginTop:verticalScale(62),
+        marginTop:verticalScale(-45),
         flexDirection:'row',
         alignItems:'center',
     },
@@ -65,6 +65,43 @@ const styles = StyleSheet.create({
     usernameText:{
         fontSize:moderateScale(12),
         color:'#515C6F'
+    },
+    regular:{
+        width:scale(325),
+        height:verticalScale(68),
+        backgroundColor:'white',
+        marginTop:verticalScale(3),
+        flexDirection:'row',
+        alignItems:'center',
+    },
+    regularIcon:{
+        width:scale(20),
+        height:scale(20),
+        resizeMode:'contain',
+        marginLeft:scale(20)
+    },
+    regularView:{
+        marginLeft:scale(10)
+    },
+    regularInput:{
+        marginTop:scale(5)
+    },
+    regularText:{
+        fontSize:moderateScale(12),
+        color:'#515C6F'
+    },
+    password:{
+        width:scale(325),
+        height:verticalScale(68),
+        backgroundColor:'white',
+        borderBottomRightRadius:scale(15),
+        borderBottomLeftRadius:scale(15),
+        marginTop:verticalScale(3),
+        flexDirection:'row',
+        alignItems:'center',
+    },
+    register:{
+        marginTop:verticalScale(15)
     }
   });
 

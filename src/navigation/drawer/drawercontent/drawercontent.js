@@ -26,7 +26,7 @@ export default function DrawerContent(props){
                     <DrawerItem text={strings.homepage} image={require('../../../assets/photos/Home.png')} onClick={()=>{props.navigation.navigate('homeStack')}}/>
                     <DrawerItem text={strings.sections} image={require('../../../assets/photos/rate.png')} onClick={()=>{props.navigation.navigate('sectionStack')}}/>
                     <DrawerItem text={strings.favourite} image={require('../../../assets/photos/Path114.png')} onClick={()=>{props.navigation.navigate('favoriteStack')}}/>
-                    <DrawerItem text={strings.busket} image={require('../../../assets/photos/finished.png')}/>
+                    <DrawerItem text={strings.busket} image={require('../../../assets/photos/finished.png')} onClick={()=>{props.navigation.navigate('busketStack')}}/>
                     <DrawerItem text={strings.search} image={require('../../../assets/photos/Search.png')}/>
                 </View>
                 <View style={styles.terms}>
