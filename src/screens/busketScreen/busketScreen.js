@@ -20,7 +20,7 @@ export default class busketScreen extends React.Component {
                 <TouchableOpacity onPress={()=>{this.props.navigation.openDrawer()}}>
                     <Image style={styles.menuBottom}  source={require('../../assets/photos/More.png')}/>
                 </TouchableOpacity>
-                <Text style={{fontSize:moderateScale(18),color:'#612A7B'}}>{strings.sections}</Text>
+                <Text style={{fontSize:moderateScale(18),color:'#612A7B'}}>{strings.busket}</Text>
                 <Image style={styles.cartBottom}  source={require('../../assets/photos/Cart.png')}/>
             </View>
         </SafeAreaView>
